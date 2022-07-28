@@ -2,19 +2,23 @@
   <div>
     <div class="home-page">
       <h1>Hi! This is a simple Nuxt 3 app.</h1>
-      <h2>Click this button below to check out a server route :) </h2>
+      <h2>Click on the buttons below to check out a server route or an API route :) </h2>
       <NuxtLink to="/hello" target="_blank">
         <button> 
             What Time Is It?
         </button>
       </NuxtLink>
-      <h2> Deploy a server-rendered Nuxt 3 app on Azure Static Web Apps using <NuxtLink to="#" class="styling">the Microsoft documentation</NuxtLink><br>
+      <NuxtLink to="/api/hello" target="_blank">
+        <button>
+            Link to API Route
+        </button>
+      </NuxtLink>
+      <h2> Deploy Nuxt 3 app with universal rendering on Azure Static Web Apps using <NuxtLink to="#" class="styling">the Microsoft documentation</NuxtLink><br>
        OR check out this <NuxtLink to="#" class="styling">blogpost</NuxtLink> about Nuxt 3 support on Azure Static Web Apps.</h2>
     </div>
     <NuxtWelcome />
   </div>
 </template>
-
 <style>
   .home-page{
     margin: 5px;
@@ -64,6 +68,7 @@
     margin: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 5px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
