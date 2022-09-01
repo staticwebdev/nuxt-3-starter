@@ -13,8 +13,7 @@
             Link to API Route
         </button>
       </NuxtLink>
-      <h2> Deploy Nuxt 3 app with universal rendering on Azure Static Web Apps using <NuxtLink to="#" class="styling">the Microsoft documentation</NuxtLink><br>
-       OR check out this <NuxtLink to="#" class="styling">blogpost</NuxtLink> about Nuxt 3 support on Azure Static Web Apps.</h2>
+      <h2> Deploy Nuxt 3 app with universal rendering on Azure Static Web Apps using <NuxtLink to="https://docs.microsoft.com/azure/static-web-apps/deploy-nuxtjs" class="styling">the Microsoft documentation</NuxtLink></h2>
     </div>
     <NuxtWelcome />
   </div>
