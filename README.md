@@ -3,8 +3,7 @@ Azure Static Web Apps allows you to easily build Nuxt 3 apps in minutes. Use thi
 
 Check out the following to learn more:
 1. [nuxt 3 documentation](https://v3.nuxtjs.org)
-2. [server-rendered nuxt 3 app on Azure Static Web Apps documentation](#)
-3. [nuxt 3 support on Azure Static Web Apps](#)
+2. [server-rendered nuxt 3 app on Azure Static Web Apps documentation](https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-nuxtjs)
 
 ## Setup
 
@@ -43,4 +42,4 @@ Locally preview production build:
 npm run preview
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment#deployment) for more information.
