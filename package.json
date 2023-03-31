@@ -8,9 +8,14 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "playwright_test": "playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "^1.32.1",
     "nuxt": "3.0.0-rc.6"
+  },
+  "dependencies": {
+    "playwright": "^1.32.1"
   }
 }

@@ -1,0 +1,432 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 50000
+      },
+      {
+        "outputDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 50000
+      },
+      {
+        "outputDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 50000
+      }
+    ],
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "pw-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFolder": "pw-report",
+          "outputFile": "report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\playwright.config.ts",
+    "rootDir": "C:/Users/Hannah Zhu/Documents/CQA sandbox/nuxt-3-starter/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.32.1",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run dev -- -o",
+      "port": 3000
+    }
+  },
+  "suites": [
+    {
+      "title": "example.spec.ts",
+      "file": "example.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "should display the home page",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "timedOut",
+                  "duration": 50019,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 16,
+                        "line": 8
+                      },
+                      "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\n=========================== logs ===========================\nnavigating to \"http://localhost:3000/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:8\n\n\u001b[0m \u001b[90m  6 |\u001b[39m test(\u001b[32m'should display the home page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m     \u001b[90m// Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:8:16\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.goto at tests\\example.spec.ts:8:16\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:04:18.304Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-display-the-home-page-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-1b440ffe454a8dd4d7f4",
+          "file": "example.spec.ts",
+          "line": 6,
+          "column": 5
+        },
+        {
+          "title": "should go to new page and display time",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "timedOut",
+                  "duration": 50014,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: net::ERR_ABORTED; maybe frame was detached?\n=========================== logs ===========================\nnavigating to \"http://localhost:3000/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m test(\u001b[32m'should go to new page and display time'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m   \u001b[90m// Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[90m// Find an element with the text 'About Page' and click on it\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'text=What Time Is It?'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// The new url should be \"/project/facebook-react/\" (baseURL is used there)\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:21:14\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.goto at tests\\example.spec.ts:21:14\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:04:18.251Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-go-to-new-page-and-display-time-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-a91334b5d27eadcb68a4",
+          "file": "example.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "should display the home page",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "timedOut",
+                  "duration": 50002,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 16,
+                        "line": 8
+                      },
+                      "message": "Error: page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"http://localhost:3000/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:8\n\n\u001b[0m \u001b[90m  6 |\u001b[39m test(\u001b[32m'should display the home page'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m     \u001b[90m// Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:8:16\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.goto at tests\\example.spec.ts:8:16\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:04:18.076Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-display-the-home-page-firefox\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-1df1810e9086fabfccc1",
+          "file": "example.spec.ts",
+          "line": 6,
+          "column": 5
+        },
+        {
+          "title": "should go to new page and display time",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "timedOut",
+                  "duration": 50005,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 14,
+                        "line": 21
+                      },
+                      "message": "Error: page.goto: Navigation failed because page was closed!\n=========================== logs ===========================\nnavigating to \"http://localhost:3000/\", waiting until \"load\"\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m test(\u001b[32m'should go to new page and display time'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m   \u001b[90m// Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[90m// Find an element with the text 'About Page' and click on it\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'text=What Time Is It?'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// The new url should be \"/project/facebook-react/\" (baseURL is used there)\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:21:14\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.goto at tests\\example.spec.ts:21:14\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:04:18.360Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-go-to-new-page-and-display-time-firefox\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-b569227ab4a9ef3eb6ec",
+          "file": "example.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "should display the home page",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 20631,
+                  "error": {
+                    "message": "\u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n",
+                    "stack": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:9:38"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 38,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[31mTimed out 10000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\u001b[2m  - waiting for locator('h1')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mexample.spec.ts:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \u001b[90m// Start from the index page (the baseURL is set via the webServer in the playwright.config.ts)\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m   \u001b[90m// Step 1 - Ensure It is in home page after login\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:9:38\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:05:24.647Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-display-the-home-page-webkit\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                    "column": 38,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-e0a4777d3fb4884f2012",
+          "file": "example.spec.ts",
+          "line": 6,
+          "column": 5
+        },
+        {
+          "title": "should go to new page and display time",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 50000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "timedOut",
+                  "duration": 50004,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 50000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts",
+                        "column": 14,
+                        "line": 23
+                      },
+                      "message": "Error: page.click: Target closed\n=========================== logs ===========================\nwaiting for locator('text=What Time Is It?')\n============================================================\n\n\u001b[90m   at \u001b[39mexample.spec.ts:23\n\n\u001b[0m \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m   \u001b[90m// Find an element with the text 'About Page' and click on it\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mclick(\u001b[32m'text=What Time Is It?'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m   \u001b[90m// The new url should be \"/project/facebook-react/\" (baseURL is used there)\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[32m'/hello'\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m   \u001b[90m// The new page should contain an h3 with \"You can deploy...\"\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\tests\\example.spec.ts:23:14\u001b[22m"
+                    },
+                    {
+                      "message": "Pending operations:\n  - page.click at tests\\example.spec.ts:23:14\n"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-03-31T22:05:25.214Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Hannah Zhu\\Documents\\CQA sandbox\\nuxt-3-starter\\test-results\\example-should-go-to-new-page-and-display-time-webkit\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a30a6eba6312f6b87ea5-6a7583895c74dac26ded",
+          "file": "example.spec.ts",
+          "line": 19,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
