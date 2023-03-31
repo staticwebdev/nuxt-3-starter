@@ -8,4 +8,5 @@ node_modules
 dist
 /test-results/
 /playwright-report/
+/pw-report/
 /playwright/.cache/
