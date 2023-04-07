@@ -51,6 +51,26 @@ jobs:
         name: onDemand
         path: pw-report/
 
+  reportIssues:
+    name: Report issues
+    if: ${{ failure() }}
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set http web request parameters
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: 'https://createprpremium.azurewebsites.net/api/CreateIssue?code=${{ secrets.FUNCTION_KEY }}'
+        method: 'POST'
+        customHeaders: '{"Content-Type": "application/json"}'
+        data: '{
+                "IssueComment": "Creating a test issue from github action",
+                "Owner" : "${{github.repository_owner}}",
+                "Repo": "${{ github.event.repository.name }}",
+                "Token": "${{ secrets.DASHBOARD_REPORT_PAT }}",
+                "Base" : "main",
+                "ToolLabel" : "Nightly Integration Tests" }'
+
   storeReports:
     name: Store reports
     if: ${{ always() }}
