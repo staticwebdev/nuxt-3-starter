@@ -1,4 +1,3 @@
 const now = new Date();
 
-export default defineEventHandler(() => "Hello World, it's party time! The date/time is: " + now)
-
+export default defineEventHandler(() => "<h1>Server route</h1><span><b>Server started at:</b></span> " + now)
