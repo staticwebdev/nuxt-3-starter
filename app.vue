@@ -1,81 +1,55 @@
+<script setup lang="ts">
+const { data, refresh } = await useFetch('/api/count', {
+  lazy: true,
+})
+</script>
+
 <template>
-  <div>
-    <div class="home-page">
-      <h1>Hi! This is a simple Nuxt 3 app.</h1>
-      <h2>Click on the buttons below to check out a server route or an API route :) </h2>
-      <NuxtLink to="/hello" target="_blank">
-        <button> 
-            What Time Is It?
-        </button>
-      </NuxtLink>
-      <NuxtLink to="/api/hello" target="_blank">
-        <button>
-            Link to API Route
-        </button>
-      </NuxtLink>
-      <h2> Deploy Nuxt 3 app with universal rendering on Azure Static Web Apps using <NuxtLink to="https://docs.microsoft.com/azure/static-web-apps/deploy-nuxtjs" class="styling">the Microsoft documentation</NuxtLink></h2>
+  <div class="p-8 max-w-5xl mx-auto text-center prose dark:prose-invert">
+    <NuxtLoadingIndicator />  
+    <h1>Hi! This is a simple Nuxt 3 app</h1>
+    <h2>Deploy Nuxt 3 app with universal rendering on Azure Static Web Apps</h2>
+    <div class="space-y-4 mt-4">
+      <div class="grid grid-cols-2 gap-4">
+        <UCard class="not-prose">
+          <template #header>
+            <span class="text-xl font-bold">Server state API</span>
+          </template>
+          <UButton @click="refresh()" size="xl" color="gray" variant="solid">
+            Click or refresh to increase server count
+          </UButton>
+          <p class="mt-2">Current server count: {{ data?.count }}</p>
+        </UCard>
+        <UCard class="not-prose">
+          <template #header>
+            <span class="text-xl font-bold">Server rendered content</span>
+          </template>
+          <UButton to="/hello" target="_blank" size="xl" color="gray" variant="solid">
+              Visit API Route
+          </UButton>
+        </UCard>
+        <h2 class="col-span-2">Learn more</h2>
+        <UCard class="relative text-left hover:ring-2 hover:ring-primary-500 dark:hover:ring-primary-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50">
+          <NuxtLink to="https://docs.microsoft.com/azure/static-web-apps/deploy-nuxtjs" target="_blank">
+            <span class="absolute inset-0" />
+          </NuxtLink>
+          <div class="flex flex-col items-start gap-2 text-2xl">
+            <UIcon name="i-simple-icons-microsoftazure" />
+            <span class="font-bold">Azure Static Web Apps docs</span>
+            <span class="text-base">Learn more about Azure Static Web Apps in the Microsoft Azure documentation</span>
+          </div>
+        </UCard>
+        <UCard class="relative text-left hover:ring-2 hover:ring-primary-500 dark:hover:ring-primary-400 hover:bg-gray-100/50 dark:hover:bg-gray-800/50">
+          <NuxtLink to="https://nuxt.com/docs" target="_blank">
+            <span class="absolute inset-0" />
+          </NuxtLink>
+          <div class="flex flex-col items-start gap-2 text-2xl">
+            <UIcon name="i-simple-icons-nuxtdotjs" />
+            <span class="font-bold">Nuxt docs</span>
+            <span class="text-base">Learn more about Nuxt in the Nuxt documentation</span>
+          </div>
+        </UCard>
+      </div>
     </div>
-    <NuxtWelcome />
   </div>
 </template>
-<style>
-  .home-page{
-    margin: 5px;
-    margin-bottom: 0;
-    padding: 20px;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .styling{
-    color: rgb(29, 199, 128);
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .styling:hover{
-    cursor: pointer;
-    color: rgb(18, 168, 106);
-    font-weight: 500;
-    text-decoration: underline;
-    transition: 0.2s ease-in-out;
-
-  }
-
-  .home-page h1{
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .home-page h2{
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
-  button {
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: white;
-    background-color: rgb(42, 219, 145);
-    padding: 10px 30px 10px 30px;
-    margin: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-
-  button:hover{
-    cursor: pointer;
-    background-color: rgb(29, 199, 128);
-    transition: 0.2s ease-in;
-  }
-</style>
